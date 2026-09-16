@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#173f35" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="개굴서바이버" />
+  <title>개굴개굴 서바이버</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icon-180.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header>
+      <div><span class="logo">🐸</span><strong>개굴개굴 서바이버</strong></div>
+      <button id="soundBtn" aria-label="소리 켜기/끄기">🔊</button>
+    </header>
+    <section class="canvas-wrap">
+      <canvas id="game" width="960" height="600" aria-label="개구리 서바이벌 게임"></canvas>
+      <div id="startPanel" class="panel">
+        <div class="mascot">🐸</div>
+        <h1>개굴개굴 서바이버</h1>
+        <p>배고픈 벌레 떼로부터 연못을 지켜요!</p>
+        <div class="character-select" aria-label="캐릭터 선택">
+          <button class="character active" data-character="frog"><span>🐸</span><strong>참각시 개구리</strong><small>균형 잡힌 연못 수호자</small></button>
+          <button class="character" data-character="badger"><span>🦡</span><strong>참서방 오소리</strong><small>느리지만 튼튼한 숲의 해결사</small></button>
+        </div>
+        <div class="controls"><kbd>WASD</kbd> 또는 <kbd>방향키</kbd> 이동<br />모바일은 화면을 드래그</div>
+        <button id="startBtn" class="primary">게임 시작</button>
+      </div>
+      <div id="levelPanel" class="panel hidden">
+        <div class="small-title">LEVEL UP!</div>
+        <h2>개구리의 능력을 골라주세요</h2>
+        <div id="upgradeChoices" class="choices"></div>
+      </div>
+      <div id="gameOverPanel" class="panel hidden">
+        <div class="mascot">💫</div>
+        <h1>연못 수호 종료!</h1>
+        <p id="finalStats"></p>
+        <button id="restartBtn" class="primary">다시 도전</button>
+      </div>
+      <div id="touchHint">드래그해서 이동</div>
+    </section>
+    <footer>자동으로 가장 가까운 적을 공격해요 · 오래 버틸수록 더 강한 적이 등장합니다</footer>
+  </main>
+  <script src="game.js"></script>
+  <script>
+    if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+      navigator.serviceWorker.register('./sw.js').catch(() => {});
+    }
+  </script>
+</body>
+</html>
