@@ -6,8 +6,8 @@ body { margin:0; display:grid; place-items:center; background:radial-gradient(ci
 header { height:48px; display:flex; align-items:center; justify-content:space-between; padding:0 8px; font-size:20px; letter-spacing:-.4px; }
 .logo { margin-right:8px; }
 header button { border:0; border-radius:12px; background:#ffffff1c; color:white; font-size:20px; width:40px; height:36px; cursor:pointer; }
-.canvas-wrap { position:relative; width:100%; aspect-ratio:8/5; border:4px solid #6ebc78; border-radius:20px; overflow:hidden; background:#7fc7ac; box-shadow:0 16px 50px #001b1799,inset 0 0 0 3px #d9f9aa55; touch-action:none; }
-canvas { width:100%; height:100%; display:block; aspect-ratio:8/5; object-fit:contain; }
+.canvas-wrap { position:relative; width:100%; border:4px solid #6ebc78; border-radius:20px; overflow:hidden; background:#7fc7ac; box-shadow:0 16px 50px #001b1799,inset 0 0 0 3px #d9f9aa55; touch-action:none; }
+canvas { width:100%; height:100%; display:block; }
 .panel { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:24px; background:#092a25d9; backdrop-filter:blur(5px); z-index:4; }
 .panel.hidden { display:none; }
 .mascot { font-size:78px; filter:drop-shadow(0 8px 0 #092a2566); animation:bob 1.4s ease-in-out infinite; }
@@ -46,6 +46,7 @@ kbd { padding:3px 8px; background:#fff6d6; color:#173f35; border-radius:6px; box
 footer { padding:9px; text-align:center; color:#bed5c8; font-size:13px; }
 #touchHint { display:none; position:absolute; bottom:12px; left:50%; transform:translateX(-50%); background:#092a2599; border-radius:999px; padding:7px 13px; font-size:12px; pointer-events:none; }
 @media (pointer:coarse) { #touchHint { display:block; } .game-shell { padding:2px; } header { height:36px; } footer { display:none; } .canvas-wrap { border-width:2px; border-radius:12px; } .panel { overflow-y:auto; } .choices { grid-template-columns:1fr; gap:8px; } .upgrade { min-height:78px; padding:8px; } .upgrade .icon { display:inline; font-size:25px; margin-right:8px; } .upgrade strong { display:inline; } h2 { font-size:18px; margin-bottom:10px; } .character span { display:inline; font-size:24px; margin-right:5px; } }
+@media (pointer:coarse) { .game-active header { display:none; } .game-active .game-shell { padding:0; } .game-active .canvas-wrap { border-radius:0; border-width:0; } .game-active #touchHint { display:none; } }
 @media (pointer:coarse) and (orientation:landscape) { .game-shell { width:min(100vw,calc((100dvh - 40px) * 1.6)); } .panel { padding:8px; } #startPanel { justify-content:flex-start; } .mascot { font-size:32px; } h1 { font-size:27px; margin:0; } .panel p { font-size:12px; } .character-select { margin:4px 0; } .character { padding:4px; } .mission-box { padding:6px 10px; margin-bottom:5px; } .controls { font-size:11px; padding:3px 9px; margin-bottom:6px; line-height:1.4; } .primary { padding:9px 26px; font-size:16px; } }
 @media (pointer:coarse) and (orientation:portrait) { .game-shell { width:100%; } .panel { padding:8px; } #startPanel { justify-content:flex-start; } .mascot { font-size:38px; } h1 { font-size:28px; letter-spacing:-2px; margin-top:0; } .panel p { font-size:12px; margin:2px 0 5px; } .controls { font-size:11px; padding:4px 9px; margin-bottom:7px; line-height:1.45; } .character-select { margin:4px 0; gap:5px; } .character { padding:5px 3px; } .character small { font-size:9px; } .mission-box { padding:7px 10px; margin-bottom:6px; font-size:12px; } }
 .viewport-compact header { height:28px; font-size:15px; }
