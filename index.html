@@ -29,6 +29,10 @@
           <button class="character active" data-character="frog"><span>🐸</span><strong>참각시 개구리</strong><small>균형 잡힌 연못 수호자</small></button>
           <button class="character" data-character="badger"><span>🦡</span><strong>참서방 오소리</strong><small>느리지만 튼튼한 숲의 해결사</small></button>
         </div>
+        <div id="missionBox" class="mission-box">
+          <strong>🐸 게임 목표 · 참각시 개구리</strong>
+          <p>연꽃 증식으로 개구리각시가 집을 잃어가고 있습니다. 연꽃을 파괴하고 끝까지 생존하여 생태계를 지켜주세요. 끝까지 생존하면 보상이 있습니다!</p>
+        </div>
         <div class="controls"><kbd>WASD</kbd> 또는 <kbd>방향키</kbd> 이동<br />모바일은 화면을 드래그</div>
         <button id="startBtn" class="primary">게임 시작</button>
       </div>
@@ -43,9 +47,16 @@
         <p id="finalStats"></p>
         <button id="restartBtn" class="primary">다시 도전</button>
       </div>
+      <div id="victoryPanel" class="panel hidden">
+        <div class="mascot">🏆</div>
+        <h1>게임 클리어!</h1>
+        <div class="reward-coupon">🎟️ 종아리 마사지 쿠폰</div>
+        <p id="victoryStats"></p>
+        <button id="victoryRestartBtn" class="primary">처음부터 다시</button>
+      </div>
       <div id="touchHint">드래그해서 이동</div>
     </section>
-    <footer>자동으로 가장 가까운 적을 공격해요 · 오래 버틸수록 더 강한 적이 등장합니다</footer>
+    <footer>3분마다 보스 등장 · 30분의 최종 보스 CM을 쓰러뜨리면 승리!</footer>
   </main>
   <script src="game.js"></script>
   <script>

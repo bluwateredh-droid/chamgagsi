@@ -22,18 +22,27 @@ h2 { margin:4px 0 20px; }
 .character strong,.character small { display:block; }
 .character strong { color:#d9f96f; margin:3px 0; }
 .character small { color:#cee0d3; }
+.mission-box { width:min(650px,95%); padding:11px 16px; margin:0 0 10px; border:2px solid #d9f96f88; border-radius:14px; background:#071f1bb8; line-height:1.45; }
+.mission-box strong { color:#d9f96f; }
+.mission-box p { margin:5px 0 0; font-size:14px; }
 kbd { padding:3px 8px; background:#fff6d6; color:#173f35; border-radius:6px; box-shadow:0 3px #7e9f7a; font-weight:800; }
 .primary { border:0; padding:14px 34px; border-radius:999px; background:linear-gradient(#d8fa72,#8ed84e); color:#16452d; font-size:20px; font-weight:900; cursor:pointer; box-shadow:0 6px #397544; transition:.12s; }
 .primary:hover { transform:translateY(-2px); box-shadow:0 8px #397544; }
 .primary:active { transform:translateY(4px); box-shadow:0 2px #397544; }
 .small-title { color:#f8d95c; font-weight:1000; font-size:28px; letter-spacing:2px; }
+#victoryPanel { background:radial-gradient(circle,#425b1de8,#092a25f2 65%); }
+#victoryPanel h1 { color:#ffe45e; }
+.reward-coupon { margin:12px 0; padding:14px 25px; border:3px dashed #6c4d16; border-radius:12px; background:#fff0a8; color:#593b0b; font-size:clamp(20px,4vw,32px); font-weight:1000; transform:rotate(-2deg); box-shadow:0 8px 20px #0006; }
 .choices { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; width:min(850px,95%); }
 .upgrade { min-height:160px; padding:18px 12px; border:2px solid #91ce76; border-radius:16px; background:#174c3f; color:#fff6d6; cursor:pointer; transition:.15s; }
 .upgrade:hover { transform:translateY(-6px); background:#216552; border-color:#d9f96f; }
+.upgrade[data-category="진화"] { border-color:#ffe45e; background:linear-gradient(145deg,#57451b,#1b5847); box-shadow:0 0 20px #ffe45e33; }
+.upgrade[data-category="범위"] { border-color:#72dded; }
+.upgrade[data-category="생존"] { border-color:#ff9aa9; }
 .upgrade .icon { font-size:38px; display:block; }
 .upgrade strong { display:block; color:#d9f96f; font-size:18px; margin:8px 0 5px; }
 .upgrade small { color:#d8e7d9; font-size:14px; }
 footer { padding:9px; text-align:center; color:#bed5c8; font-size:13px; }
 #touchHint { display:none; position:absolute; bottom:12px; left:50%; transform:translateX(-50%); background:#092a2599; border-radius:999px; padding:7px 13px; font-size:12px; pointer-events:none; }
 @media (pointer:coarse) { #touchHint { display:block; } .game-shell { padding:4px; } header { height:40px; } footer { display:none; } .choices { grid-template-columns:1fr; gap:8px; } .upgrade { min-height:78px; padding:8px; } .upgrade .icon { display:inline; font-size:25px; margin-right:8px; } .upgrade strong { display:inline; } h2 { font-size:18px; margin-bottom:10px; } .character span { display:inline; font-size:24px; margin-right:5px; } }
-@media (orientation:portrait) and (max-width:700px) { .game-shell { width:100vw; } .canvas-wrap { border-width:2px; border-radius:12px; } canvas { aspect-ratio:3/4; object-fit:cover; } .panel { padding:8px; } .mascot { font-size:42px; } h1 { font-size:30px; letter-spacing:-2px; margin-top:2px; } .panel p { font-size:13px; margin:2px 0 5px; } .controls { font-size:12px; padding:5px 10px; margin-bottom:8px; line-height:1.5; } .character-select { margin:5px 0; gap:6px; } .character { padding:6px 3px; } .character small { font-size:10px; } }
+@media (orientation:portrait) and (max-width:700px) { .game-shell { width:100vw; } .canvas-wrap { border-width:2px; border-radius:12px; } canvas { aspect-ratio:3/4; object-fit:cover; } .panel { padding:8px; } #startPanel { justify-content:flex-start; overflow-y:auto; } .mascot { font-size:38px; } h1 { font-size:28px; letter-spacing:-2px; margin-top:0; } .panel p { font-size:12px; margin:2px 0 5px; } .controls { font-size:11px; padding:4px 9px; margin-bottom:7px; line-height:1.45; } .character-select { margin:4px 0; gap:5px; } .character { padding:5px 3px; } .character small { font-size:9px; } .mission-box { padding:7px 10px; margin-bottom:6px; font-size:12px; } }
