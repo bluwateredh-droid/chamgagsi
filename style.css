@@ -2,6 +2,7 @@
 * { box-sizing:border-box; }
 html,body { width:100%; height:100%; }
 body { margin:0; display:grid; place-items:center; background:radial-gradient(circle at 50% 0,#315f55,#102e2b 70%); font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif; color:var(--cream); overflow:hidden; padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
+body.game-active { padding:0; }
 .game-shell { width:min(100%,1100px); max-width:100%; padding:4px; }
 header { height:48px; display:flex; align-items:center; justify-content:space-between; padding:0 8px; font-size:20px; letter-spacing:-.4px; }
 .logo { margin-right:8px; }
